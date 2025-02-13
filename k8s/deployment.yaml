@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-service-2
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-service-2
+  template:
+    metadata:
+      labels:
+        app: go-service-2
+    spec:
+      containers:
+      - name: go-service-2
+        image: your-docker-registry/go-service-2:1.0.0
+        ports:
+        - containerPort: 8080
