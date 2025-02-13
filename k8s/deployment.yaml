@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: go-service-2
-        image: your-docker-registry/go-service-2:1.0.0
+        image: punithbrave/go-service-2:1.0.0
         ports:
         - containerPort: 8080
